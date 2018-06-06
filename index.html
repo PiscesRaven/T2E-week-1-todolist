@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ToDoList</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/main.css" />
+    <script src="JS/main.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul id="menu">
+            <li class="menu-list">
+                <a href="#" class="active">My Tasks</a>
+            </li>
+            <li class="menu-list">
+                <a href="#">In Progress</a>
+            </li>
+            <li class="menu-list">
+                <a href="#">Completed</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+
+        <article id="main">
+            <input type="text" id="add-Task" placeholder="+&nbsp Add Task">
+            <!-- add Task code -->
+            <Section class="task-menu">
+                <div class="task-menu-div">
+                    <i class="far fa-calendar-alt icon">
+                        <span>DeadLine</span>
+                    </i>
+                    <div class="task-menu-span">
+                        <input type="date">
+                        <input type="time">
+                    </div>
+
+                </div>
+                <div class="task-menu-div">
+                    <i class="far fa-file icon">
+                        <span>File</span>
+                    </i>
+                    <span class="task-menu-span">
+                        <input type="file">
+                    </span>
+
+                </div>
+                <div class="task-menu-div">
+                    <i class="far fa-comment-dots icon">
+                        <span>Comment</span>
+                    </i>
+                    <span class="task-menu-span">
+                        <input type="text">
+                    </span>
+
+                </div>
+                <div class="btn-div">
+                    <span class="btn-span-cancel">
+                        <i class="btn-span">X Cancel </i>
+                    </span>
+                    <span class="btn-span-add-task">
+                        <i>+ Add Task </i>
+                    </span>
+                </div>
+            </Section>
+            <!-- edit code -->
+            <Section>
+                <div>
+                    <i>
+                        <span>DeadLine</span>
+                    </i>
+                    <input type="date">
+                    <input type="text">
+                </div>
+                <div>
+                    <i>
+                        <span>File</span>
+                    </i>
+                    <input type="file">
+                </div>
+                <div>
+                    <i>
+                        <span>Comment</span>
+                    </i>
+                    <input type="text">
+                </div>
+                <div>
+                    <span>
+                        <i>X
+                            <P>Cancel</P>
+                        </i>
+                    </span>
+                    <span>
+                        <i>+
+                            <P>Save</P>
+                        </i>
+                    </span>
+                </div>
+            </Section>
+            <!-- list code -->
+            <ul>
+                <li>
+                    <input type="checkbox">
+                    <div>
+                        <H2>Type</H2>
+                        <i></i>
+                    </div>
+                    <i>star</i>
+                    <i>edit</i>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <div>
+                        <H2>Type</H2>
+                        <i></i>
+                    </div>
+                    <i>star</i>
+                    <i>edit</i>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <div>
+                        <H2>Type</H2>
+                        <i></i>
+                    </div>
+                    <i>star</i>
+                    <i>edit</i>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <div>
+                        <H2>
+                            <strike>Type</strike>
+                        </H2>
+                        <i></i>
+                    </div>
+                    <i>star</i>
+                    <i>edit</i>
+                </li>
+
+            </ul>
+        </article>
+    </main>
+</body>
+
+</html>
