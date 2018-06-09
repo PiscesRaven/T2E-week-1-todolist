@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ToDoList</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="v<!DOCTYPEiewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="CSS/reset.css" />
@@ -34,12 +34,10 @@
             <!-- add Task code -->
             <Section class="task-menu">
                 <div class="task-menu-title">
-                    <div class="task-menu-title-block">
-                        <i class="far fa-square"></i>
-                        <h2>Type Something here</h2>
-                        <i class="fas fa-pencil-alt"></i>
-                        <i class="far fa-star"></i>
-                    </div>
+                    <i class="far fa-square"></i>
+                    <h2 class="task-title-name">Type Something here</h2>
+                    <i class="far fa-star"></i>
+                    <i class="fas fa-pencil-alt"></i>
                 </div>
                 <div class="task-menu-div">
                     <i class="far fa-calendar-alt icon">
@@ -79,80 +77,15 @@
                 </div>
             </Section>
             <!-- edit code -->
-            <Section>
-                <div>
-                    <i>
-                        <span>DeadLine</span>
-                    </i>
-                    <input type="date">
-                    <input type="text">
-                </div>
-                <div>
-                    <i>
-                        <span>File</span>
-                    </i>
-                    <input type="file">
-                </div>
-                <div>
-                    <i>
-                        <span>Comment</span>
-                    </i>
-                    <input type="text">
-                </div>
-                <div>
-                    <span>
-                        <i>X
-                            <P>Cancel</P>
-                        </i>
-                    </span>
-                    <span>
-                        <i>+
-                            <P>Save</P>
-                        </i>
-                    </span>
-                </div>
-            </Section>
-            <!-- list code -->
-            <ul>
-                <li>
-                    <input type="checkbox">
-                    <div>
-                        <H2>Type</H2>
-                        <i></i>
-                    </div>
-                    <i>star</i>
-                    <i>edit</i>
-                </li>
-                <li>
-                    <input type="checkbox">
-                    <div>
-                        <H2>Type</H2>
-                        <i></i>
-                    </div>
-                    <i>star</i>
-                    <i>edit</i>
-                </li>
-                <li>
-                    <input type="checkbox">
-                    <div>
-                        <H2>Type</H2>
-                        <i></i>
-                    </div>
-                    <i>star</i>
-                    <i>edit</i>
-                </li>
-                <li>
-                    <input type="checkbox">
-                    <div>
-                        <H2>
-                            <strike>Type</strike>
-                        </H2>
-                        <i></i>
-                    </div>
-                    <i>star</i>
-                    <i>edit</i>
-                </li>
 
+            <!-- list code -->
+            <ul class="task-ul-list">
+                <li class="task-list">
+                    <input type="checkbox">
+                    <h2 class="task-title-name">Type</h2>
+                    <i class="far fa-star"></i>
+                    <i class="fas fa-pencil-alt"></i>
+                </li>
             </ul>
         </article>
     </main>
