@@ -34,10 +34,10 @@
             <!-- 編輯欄位 -->
             <Section id="task-menu">
                 <div class="task-menu-title-edit">
-                    <i class="far fa-square fa-4x"></i>
-                    <h2 class="task-title-name">Type Something here</h2>
+                    <input type="checkbox">
+                    <input type="text" placeholder="Type Something here" class="task-title-name">
                     <div class="task-edit">
-                        <i class="far fa-star fa-7x"></i>
+                        <i class="far fa-star"></i>
                         <i class="fas fa-pencil-alt fa-7x"></i>
                     </div>
                 </div>
@@ -79,23 +79,88 @@
                 </div>
             </Section>
             <!-- list code -->
-            <article class="task-list-article">
-                <section class="task-list">
+            <ul class="task-list-article">
+                <li class="task-list">
                     <div class="tasklist-list-title">
-                        <i class="far fa-square fa-4x"></i>
-                        <h2 class="task-title-name">Type Something here</h2>
+                        <input type="checkbox">
+                        <h2 class="task-title-name">T2E-ToDoList Week1</h2>
                         <div class="task-edit">
-                            <i class="far fa-star fa-7x"></i>
-                            <i class="fas fa-pencil-alt fa-7x"></i>
+                            <i class="far fa-star"></i>
+                            <i class="fas fa-pencil-alt"></i>
                         </div>
                     </div>
                     <div class="task-list-info">
                         <i class="far fa-calendar-alt icon fa-4x"></i>
-                        <h3 class="task-list-date">12355</h3>
-                        <i class="fas fa-pencil-alt fa-4x"></i>
+                        <h3 class="task-list-date">18/06/04</h3>
                     </div>
-                </section>
-            </article>
+                    <Section id="task-menu">
+                        <div class="task-menu-div">
+                            <i class="far fa-calendar-alt icon fa-7x">
+                                <span>DeadLine</span>
+                            </i>
+                            <span class="task-menu-span fa-7x">
+                                <input type="date">
+                                <input type="time">
+                            </span>
+
+                        </div>
+                        <div class="task-menu-div">
+                            <i class="far fa-file icon fa-7x">
+                                <span>File</span>
+                            </i>
+                            <span class="task-menu-span fa-7x">
+                                <input type="file">
+                            </span>
+
+                        </div>
+                        <div class="task-menu-div">
+                            <i class="far fa-comment-dots icon fa-7x">
+                                <span>Comment</span>
+                            </i>
+                            <span class="task-menu-span fa-7x">
+                                <textarea name="textarea" id="task-text" placeholder="Type your memo here…"></textarea>
+                            </span>
+
+                        </div>
+                        <div class="btn-div">
+                            <span id="btn-span-cancel">
+                                <i class="btn-span">X Cancel </i>
+                            </span>
+                            <span id="btn-span-add-task">
+                                <i>+ Add Task </i>
+                            </span>
+                        </div>
+                    </Section>
+                </li>
+                <li class="task-list">
+                    <div class="tasklist-list-title">
+                        <input type="checkbox">
+                        <h2 class="task-title-name">Type Something here</h2>
+                        <div class="task-edit">
+                            <i class="far fa-star"></i>
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                    </div>
+                    <div class="task-list-info">
+                        <i class="far fa-calendar-alt icon fa-4x"></i>
+                        <h3 class="task-list-date">18/06/04</h3>
+                    </div>
+                </li>
+                <li class="task-list">
+                    <div class="tasklist-list-title">
+                        <input type="checkbox">
+                        <h2 class="task-title-name">Type Something here</h2>
+                        <div class="task-edit">
+                            <i class="far fa-star"></i>
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                    </div>
+                    <div class="task-list-info">
+                        <i class="far fa-calendar-alt icon fa-4x"></i>
+                        <h3 class="task-list-date">18/06/04</h3>
+                    </div>
+                </li>
+            </ul>
         </article>
 
     </main>

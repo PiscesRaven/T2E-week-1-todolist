@@ -21,3 +21,29 @@ addTaskTextarea.onclick = function () {
 
     }
 }
+
+var listTitle = document.querySelector('.task-list');
+listTitle.onclick = function (event) {
+    var taskTitleName = listTitle.querySelector('.task-title-name');
+    if (event.target.className === 'far fa-star') {
+        event.target.classList.replace('far', 'fas');
+        event.target.style.color = '#F5A623';
+        listTitle.style.background = '#FFF2DC';
+        taskTitleName.style.background = '#FFF2DC';
+        taskTitleName.style.border = '1px solid #FFF2DC';
+    } else if (event.target.className === 'fas fa-star') {
+        event.target.classList.replace('fas', 'far');
+        event.target.style.color = '#000000';
+        listTitle.style.background = '#f3f3f2';
+        taskTitleName.style.background = '#F2F2F2';
+        taskTitleName.style.border = '1px solid #f2f2f2';
+    }
+    var taskMenu = listTitle.querySelector('#task-menu');
+    var taskListInfo = listTitle.querySelector('.task-list-info');
+    if (event.target.className === 'fas fa-pencil-alt') {
+        taskListInfo.style.display = 'none';
+        taskMenu.style.display = 'block';
+        listTitle.style.padding = '0';
+        listTitle.childNodes[1].classList.replace('tasklist-list-title', 'task-menu-title-edit');
+    }
+}
