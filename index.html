@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ToDoList</title>
-    <meta name="v<!DOCTYPEiewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="CSS/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="CSS/main.css" />
-    <script src="JS/main.js"></script>
+
 </head>
 
 <body>
@@ -30,65 +30,77 @@
     <main>
 
         <article id="main">
-            <input type="text" id="add-Task" placeholder="+&nbsp Add Task">
-            <!-- add Task code -->
-            <Section class="task-menu">
-                <div class="task-menu-title">
-                    <i class="far fa-square"></i>
+            <input type="text" id="add-task-texearea" placeholder="+&nbsp Add Task">
+            <!-- 編輯欄位 -->
+            <Section id="task-menu">
+                <div class="task-menu-title-edit">
+                    <i class="far fa-square fa-4x"></i>
                     <h2 class="task-title-name">Type Something here</h2>
-                    <i class="far fa-star"></i>
-                    <i class="fas fa-pencil-alt"></i>
+                    <div class="task-edit">
+                        <i class="far fa-star fa-7x"></i>
+                        <i class="fas fa-pencil-alt fa-7x"></i>
+                    </div>
                 </div>
                 <div class="task-menu-div">
-                    <i class="far fa-calendar-alt icon">
+                    <i class="far fa-calendar-alt icon fa-7x">
                         <span>DeadLine</span>
                     </i>
-                    <div class="task-menu-span">
+                    <span class="task-menu-span fa-7x">
                         <input type="date">
                         <input type="time">
-                    </div>
+                    </span>
 
                 </div>
                 <div class="task-menu-div">
-                    <i class="far fa-file icon">
+                    <i class="far fa-file icon fa-7x">
                         <span>File</span>
                     </i>
-                    <span class="task-menu-span">
+                    <span class="task-menu-span fa-7x">
                         <input type="file">
                     </span>
 
                 </div>
                 <div class="task-menu-div">
-                    <i class="far fa-comment-dots icon">
+                    <i class="far fa-comment-dots icon fa-7x">
                         <span>Comment</span>
                     </i>
-                    <span class="task-menu-span">
-                        <input type="text">
+                    <span class="task-menu-span fa-7x">
+                        <textarea name="textarea" id="task-text" placeholder="Type your memo here…"></textarea>
                     </span>
 
                 </div>
                 <div class="btn-div">
-                    <span class="btn-span-cancel">
+                    <span id="btn-span-cancel">
                         <i class="btn-span">X Cancel </i>
                     </span>
-                    <span class="btn-span-add-task">
+                    <span id="btn-span-add-task">
                         <i>+ Add Task </i>
                     </span>
                 </div>
             </Section>
-            <!-- edit code -->
-
             <!-- list code -->
-            <ul class="task-ul-list">
-                <li class="task-list">
-                    <input type="checkbox">
-                    <h2 class="task-title-name">Type</h2>
-                    <i class="far fa-star"></i>
-                    <i class="fas fa-pencil-alt"></i>
-                </li>
-            </ul>
+            <article class="task-list-article">
+                <section class="task-list">
+                    <div class="tasklist-list-title">
+                        <i class="far fa-square fa-4x"></i>
+                        <h2 class="task-title-name">Type Something here</h2>
+                        <div class="task-edit">
+                            <i class="far fa-star fa-7x"></i>
+                            <i class="fas fa-pencil-alt fa-7x"></i>
+                        </div>
+                    </div>
+                    <div class="task-list-info">
+                        <i class="far fa-calendar-alt icon fa-4x"></i>
+                        <h3 class="task-list-date">12355</h3>
+                        <i class="fas fa-pencil-alt fa-4x"></i>
+                    </div>
+                </section>
+            </article>
         </article>
+
     </main>
 </body>
 
 </html>
+
+<script src="JS/main.js"></script>

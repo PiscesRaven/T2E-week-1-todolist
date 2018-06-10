@@ -45,26 +45,29 @@ main {
     height: 100%;
 }
 
-#add-Task {
+#add-task-texearea {
     margin: 10px auto;
     width: 100%;
     height: 30px;
     font-size: 16px;
     border-radius: 7px;
+    padding-left: 0.4rem;
+    padding-top: 0.4rem;
     box-sizing: border-box;
 }
 
-.task-menu {
+#task-menu {
+    display: none;
     background: #f2f2f2;
     width: 100%;
-    border-radius: 0.5em;
-    margin: 1% auto;
+    border-radius: 0.5rem;
 }
 
 .task-title-name {
     font-size: 24px;
     padding: 0 1.5rem;
     width: 85%;
+    display: block;
 }
 
 .btn-div {
@@ -74,14 +77,14 @@ main {
     text-align: center;
 }
 
-.btn-span-cancel {
+#btn-span-cancel {
     padding: 10px 0;
     width: 100%;
     color: #D0021B;
     background: #FFF;
 }
 
-.btn-span-add-task {
+#btn-span-add-task {
     padding: 10px 0;
     width: 100%;
     color: #FFF;
@@ -90,11 +93,11 @@ main {
 
 .icon {
     display: inherit;
-    padding: 1em 0;
+    padding: 0.3em 0;
 }
 
 .task-menu-div {
-    padding: 1em 5em;
+    padding: 0.5em 5em;
 }
 
 .task-menu-span {
@@ -108,7 +111,7 @@ main {
     padding: 0 0.3em;
 }
 
-.task-menu-title {
+.task-menu-title-edit {
     width: 100%;
     height: 60px;
     padding: 1em 5em;
@@ -118,7 +121,7 @@ main {
     align-items: center;
 }
 
-.task-ul-list {
+.task-list-article {
     margin: 0.5rem auto;
 }
 
@@ -126,6 +129,38 @@ main {
     padding: 1em 5em;
     background: #f3f3f2;
     width: 100%;
+    box-sizing: border-box;
+}
+
+.task-edit {
+    width: 15%;
     display: inline-flex;
+    justify-content: space-between;
     align-items: center;
+}
+
+#task-text {
+    width: 80%;
+    height: 200px;
+    font-weight: 500;
+    resize: none;
+}
+
+.task-list-info {
+    display: inline-flex;
+    width: 100%;
+    padding: 0.5rem 4rem;
+    align-items: center;
+    color: #757575;
+}
+
+.tasklist-list-title {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+}
+
+.task-list-date {
+    padding: 0 1rem;
+    font-size: 20px;
 }
