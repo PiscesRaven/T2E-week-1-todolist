@@ -10,162 +10,251 @@
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="CSS/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="CSS/main.css" />
-
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 </head>
 
 <body>
-    <nav>
-        <ul id="menu">
-            <li class="menu-list">
-                <a href="#" class="active">My Tasks</a>
-            </li>
-            <li class="menu-list">
-                <a href="#">In Progress</a>
-            </li>
-            <li class="menu-list">
-                <a href="#">Completed</a>
-            </li>
-        </ul>
-    </nav>
-    <main>
-
-        <article id="main">
-            <input type="text" id="add-task-texearea" placeholder="+&nbsp Add Task">
-            <!-- 編輯欄位 -->
-            <Section id="task-menu">
-                <div class="task-menu-title-edit">
-                    <input type="checkbox">
-                    <input type="text" placeholder="Type Something here" class="task-title-name">
-                    <div class="task-edit">
-                        <i class="far fa-star"></i>
-                        <i class="fas fa-pencil-alt fa-7x"></i>
-                    </div>
-                </div>
-                <div class="task-menu-div">
-                    <i class="far fa-calendar-alt icon fa-7x">
-                        <span>DeadLine</span>
-                    </i>
-                    <span class="task-menu-span fa-7x">
-                        <input type="date">
-                        <input type="time">
-                    </span>
-
-                </div>
-                <div class="task-menu-div">
-                    <i class="far fa-file icon fa-7x">
-                        <span>File</span>
-                    </i>
-                    <span class="task-menu-span fa-7x">
-                        <input type="file">
-                    </span>
-
-                </div>
-                <div class="task-menu-div">
-                    <i class="far fa-comment-dots icon fa-7x">
-                        <span>Comment</span>
-                    </i>
-                    <span class="task-menu-span fa-7x">
-                        <textarea name="textarea" id="task-text" placeholder="Type your memo here…"></textarea>
-                    </span>
-
-                </div>
-                <div class="btn-div">
-                    <span id="btn-span-cancel">
-                        <i class="btn-span">X Cancel </i>
-                    </span>
-                    <span id="btn-span-add-task">
-                        <i>+ Add Task </i>
-                    </span>
-                </div>
-            </Section>
-            <!-- list code -->
-            <ul class="task-list-article">
-                <li class="task-list">
-                    <div class="tasklist-list-title">
-                        <input type="checkbox">
-                        <h2 class="task-title-name">T2E-ToDoList Week1</h2>
-                        <div class="task-edit">
-                            <i class="far fa-star"></i>
-                            <i class="fas fa-pencil-alt"></i>
-                        </div>
-                    </div>
-                    <div class="task-list-info">
-                        <i class="far fa-calendar-alt icon fa-4x"></i>
-                        <h3 class="task-list-date">18/06/04</h3>
-                    </div>
-                    <Section id="task-menu">
-                        <div class="task-menu-div">
-                            <i class="far fa-calendar-alt icon fa-7x">
-                                <span>DeadLine</span>
-                            </i>
-                            <span class="task-menu-span fa-7x">
-                                <input type="date">
-                                <input type="time">
-                            </span>
-
-                        </div>
-                        <div class="task-menu-div">
-                            <i class="far fa-file icon fa-7x">
-                                <span>File</span>
-                            </i>
-                            <span class="task-menu-span fa-7x">
-                                <input type="file">
-                            </span>
-
-                        </div>
-                        <div class="task-menu-div">
-                            <i class="far fa-comment-dots icon fa-7x">
-                                <span>Comment</span>
-                            </i>
-                            <span class="task-menu-span fa-7x">
-                                <textarea name="textarea" id="task-text" placeholder="Type your memo here…"></textarea>
-                            </span>
-
-                        </div>
-                        <div class="btn-div">
-                            <span id="btn-span-cancel">
-                                <i class="btn-span">X Cancel </i>
-                            </span>
-                            <span id="btn-span-add-task">
-                                <i>+ Add Task </i>
-                            </span>
-                        </div>
-                    </Section>
+    <div id="app">
+        <nav>
+            <ul id="menu">
+                <li class="menu-list">
+                    <a href="#" :class="{ 'active' :  visibility === 'all' }" @click.prevent="visibility = 'all'">
+                        My Tasks
+                    </a>
                 </li>
-                <li class="task-list">
-                    <div class="tasklist-list-title">
-                        <input type="checkbox">
-                        <h2 class="task-title-name">Type Something here</h2>
-                        <div class="task-edit">
-                            <i class="far fa-star"></i>
-                            <i class="fas fa-pencil-alt"></i>
-                        </div>
-                    </div>
-                    <div class="task-list-info">
-                        <i class="far fa-calendar-alt icon fa-4x"></i>
-                        <h3 class="task-list-date">18/06/04</h3>
-                    </div>
+                <li class="menu-list">
+                    <a href="#" :class="{ 'active' :  visibility === 'active' }" @click.prevent="visibility = 'active'">
+                        In Progress
+                    </a>
                 </li>
-                <li class="task-list">
-                    <div class="tasklist-list-title">
-                        <input type="checkbox">
-                        <h2 class="task-title-name">Type Something here</h2>
-                        <div class="task-edit">
-                            <i class="far fa-star"></i>
-                            <i class="fas fa-pencil-alt"></i>
-                        </div>
-                    </div>
-                    <div class="task-list-info">
-                        <i class="far fa-calendar-alt icon fa-4x"></i>
-                        <h3 class="task-list-date">18/06/04</h3>
-                    </div>
+                <li class="menu-list">
+                    <a href="#" :class="{ 'active' :  visibility === 'completed' }" @click.prevent="visibility = 'completed'">
+                        Completed
+                    </a>
                 </li>
             </ul>
-        </article>
+        </nav>
+        <main>
+            <article id="main">
+                <!-- 新增表格的樣式 -->
+                <div class="add-task-texearea" @click="showAddList=true" v-if="!showAddList && inputDiv">
+                    <p class="input-main">+Add Task</p>
+                </div>
 
-    </main>
+                <!-- ADD 介面 -->
+                <Section id="task-menu" v-if="showAddList">
+                    <div class="task-menu-title-edit">
+                        <input type="checkbox">
+                        <input type="text" placeholder="Type Something here" class="task-title-name" v-model.trim="txt">
+                        <div class="task-edit">
+                            <i class="far fa-star"></i>
+                            <i class="fas fa-pencil-alt" @click="cancelAdd"></i>
+                        </div>
+                    </div>
+                    <div class="task-menu-div">
+                        <i class="far fa-calendar-alt icon  ">
+                            <span>DeadLine</span>
+                        </i>
+                        <span class="task-menu-span  ">
+                            <!-- <input type="date" v-model="tTime"> -->
+                            <el-date-picker v-model="tTime" type="date" placeholder="Choose the datetime">
+                            </el-date-picker>
+                        </span>
+
+                    </div>
+
+                    <div class="task-menu-div">
+                        <i class="far fa-comment-dots icon  ">
+                            <span>Comment</span>
+                        </i>
+                        <span class="task-menu-span  ">
+                            <textarea name="textarea" id="task-text" placeholder="Type your memo here…" v-model.trim="comment"></textarea>
+                        </span>
+
+                    </div>
+                    <div class="btn-div">
+                        <span id="btn-span-cancel" @click="cancelAdd()">
+                            <i class="btn-span">X Cancel </i>
+                        </span>
+                        <span id="btn-span-add-task" @click="submit">
+                            <i>+ Add Task </i>
+                        </span>
+                    </div>
+                </Section>
+
+                <!-- list code -->
+                <ul class="task-list-article">
+                    <li class="task-list" v-for="(item,idx) in filterList" :class="{ isStar: item.star}">
+                        <div class="tasklist-list-title">
+                            <input type="checkbox" v-model="item.completed">
+                            <input type="text" class="task-title-name" :class="{completed: item.completed == true}"
+                                :disabled="!item.status" :placeholder="item.txt" v-model="item.txt">
+                            <div class="task-edit">
+                                <i @click="isStar(idx)" :class="[item.star ? 'fas fa-star' :'far fa-star']"></i>
+                                <i @click="editList(item),(clickId == idx)? clickId = -1:clickId= idx" class="fas fa-pencil-alt"></i>
+                            </div>
+                        </div>
+                        <div class="task-list-info">
+                            <i class="far fa-calendar-alt icon fa-4x"></i>
+                            <h3 class="task-list-date" v-if="item.tTime">{{myDate(item.tTime)}}</h3>
+                        </div>
+                        <!--  編輯表單 -->
+                        <Section id="task-menu" v-if="clickId == idx">
+                            <div class="task-menu-div">
+                                <i class="far fa-calendar-alt icon  ">
+                                    <span>DeadLine</span>
+                                </i>
+                                <span class="task-menu-span  ">
+                                    <!-- <input type="date" v-model="editTime"> -->
+                                    <el-date-picker v-model="editTime" type="date" value-format="yyyy/MM/dd"
+                                        placeholder="选择日期时间">
+                                    </el-date-picker>
+                                </span>
+                            </div>
+                            <div class="task-menu-div">
+                                <i class="far fa-comment-dots icon  ">
+                                    <span>Comment</span>
+                                </i>
+                                <span class="task-menu-span  ">
+                                    <textarea name="textarea" id="task-text" v-model="editComment" placeholder="Type your memo here…"></textarea>
+                                </span>
+                            </div>
+                            <div class="btn-div">
+                                <span id="btn-span-cancel" @click="cancelAdd(idx)">
+                                    <i class="btn-span">X Cancel </i>
+                                </span>
+                                <span id="btn-span-add-task" @click="editDone(item)">
+                                    <i>+ Add Task </i>
+                                </span>
+                            </div>
+                        </Section>
+                    </li>
+                </ul>
+            </article>
+        </main>
+    </div>
 </body>
 
 </html>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            id: 2,
+            txt: '',//title
+            tTime: '',//日期
+            comment: '', //留言
+            status: false,//可否編輯
+            visibility: 'all',//list狀態
+            star: false,//星星
+            showAddList: false,//顯示表單
+            inputDiv: true,//顯示input樣式
+            clickId: -1,
+            edit: {},
+            editTitle: '',
+            editTime: '',
+            editComment: '',
+            savedList: [{
+                id: 0,
+                txt: '大家來學寫Vue',
+                tTime: '2018-06-04T16:00:00.000Z',
+                comment: '0112',
+                status: false,
+                completed: false,
+                star: false,
+            },
+            {
+                id: 1,
+                txt: 'Vue Todolist',
+                tTime: '2018-10-04T16:00:00.000Z',
+                comment: '321',
+                status: false,
+                completed: false,
+                star: false,
+            }],
+        },
+        methods: {
+            myDate(date) {
+                return (new Date(date).getMonth() + 1) + '/' + new Date(date).getDate();
+            },
+            // 表格加亮 & 星星加亮
+            isStar(idx) {
+                this.savedList[idx].star = !this.savedList[idx].star;
+                console.log(this.savedList[idx].star)
+            },
+            // 新增 todolist
+            submit() {
+                let inputTxt = this.txt;
+                if (!inputTxt) return false;
+                this.id++
+                this.savedList.push({
+                    id: this.id,
+                    txt: inputTxt,//輸入文字
+                    tTime: this.tTime,//存入時間
+                    completed: false,
+                    comment: this.comment,
+                    status: false,
+                    star: false,
+                })
+                this.showAddList = false;
+                this.resetIn
+            },
+            //取消新增
+            cancelAdd(idx) {
+                if (idx || idx == 0) {
+                    this.clickId = -1;
+                    this.edit.status = !this.edit.status;
+                    this.resetInput();
+                    console.log('1')
+                }
+                else {
+                    this.resetInput();
+                    console.log('2')
+                }
+            },
+            // 編輯
+            editList(item) {
+                this.edit = item;
+                this.edit.status = !this.edit.status;
+                this.editTitle = item.txt;
+                this.editTime = item.tTime;
+                this.editComment = item.comment;
+                console.log(this.edit.status);
 
-<script src="JS/main.js"></script>
+            },
+            // 編輯存檔
+            editDone(item) {
+                console.log('完成編輯');
+                item.txt = this.editTitle;
+                item.tTime = this.editTime;
+                item.comment = this.editComment;
+                this.edit.status = !this.edit.status;
+                this.clickId = -1;
+                this.resetInput();
+            },
+            resetInput() {
+                this.edit = {
+                    editTitle: '',
+                    editTime: '',
+                    editComment: '',
+                    status: !status
+                };
+                this.showAddList = false;
+                this.inputDiv = true;
+            }
+        },
+        computed: {
+            filterList() {
+                return this.savedList.filter(item => {
+                    if (this.visibility == 'all') return this.savedList;
+                    else if (this.visibility == 'active') return !item.completed;
+                    else if (this.visibility == 'completed') return item.completed;
+
+                })
+
+            }
+        }
+    })
+</script>
